@@ -102,6 +102,20 @@ echo "export PATH=$PATH:~/bin" >> ~/.profile
 chmod +x ~/stix-pcawg-pipeline/scripts/score-client/bin/score-client
 
 
+### install stix and giggle
+################################################################################
+git clone https://github.com/ryanlayer/giggle.git
+cd giggle
+make
+cd ..
+wget http://www.sqlite.org/2017/sqlite-amalgamation-3170000.zip
+unzip sqlite-amalgamation-3170000.zip
+git clone https://github.com/ryanlayer/stix.git
+cd stix
+make
+
+
+
 
 
 

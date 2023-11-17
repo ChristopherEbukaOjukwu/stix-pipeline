@@ -27,18 +27,16 @@ function stix_get_support
                 exit 1;;
         esac
     done
-    # this part hurts me
-    cd /mnt/local
 
     ## TODO separate summation from the stix query
     # we want to count the number of samples that support a query
     # ie count the number of lines in the result first. Then sum it.
     # yep its all hard coded...
-    samples=$(/mnt/local/bin/stix \
-         -i tumour_index \
-         -d pca.ped.db \
+    samples=$(/path_to_stix_command \
+         -i 1kgp_giggle_index \
+         -d 1kg.ped.db \
          -t $svtype -s 500 \
-         -l "$chr:$start-$end" \
+         -l "$chr:$start-$start" \
          -r "$chr:$start-$end" |
          tail -n+3 | # skip first two lines
          cut -f4,5)

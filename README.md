@@ -1,3 +1,3 @@
 # stix-pipeline
 
-Contains everything needed for STIX's SV calls. 
+Contains everything needed for STIX-Giggle calls. 

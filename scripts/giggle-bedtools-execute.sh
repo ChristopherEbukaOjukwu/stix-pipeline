@@ -9,4 +9,4 @@ while IFS= read -r line; do
 
 
 
-done < <(zcat sorted_genelist.bed.gz)
+done < <(zcat sorted_hg19.protein_coding.bed.gz)
